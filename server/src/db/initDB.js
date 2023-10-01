@@ -13,8 +13,8 @@ const main = async () => {
 
     console.log('Creating tables...');
 
-    await connection.execute(`
-        CREATE TABLE IF NOT EXISTS tasks (
+    await connection.query(`
+        CREATE TABLE IF NOT EXISTS todos (
             id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
             title VARCHAR(30) NOT NULL,
             text VARCHAR(280) NOT NULL,
